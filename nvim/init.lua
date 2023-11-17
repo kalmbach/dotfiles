@@ -7,7 +7,7 @@ vim.g.maplocalleader = ' '
 -- Basic Keymaps
 -- Keymaps for better default experience
 -- See `:help vim.keymaps.set()`
-vim.keymap.set({ 'n', 'v'}, '<Space>', '<Nop>', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Window movement
 vim.keymap.set("n", "<C-j>", "<C-w>j")
@@ -141,14 +141,14 @@ require('lazy').setup({
     },
   },
 
-  -- Autopairs {} () [] 
-  { 'windwp/nvim-autopairs', opts = {} },
+  -- Autopairs {} () []
+  { 'windwp/nvim-autopairs',  opts = {} },
 
   -- Add/Delete/Change surrounding pairs
-  {  "kylechui/nvim-surround", version = "*" },
+  { "kylechui/nvim-surround", version = "*" },
 
   -- Useful plugin to show you pending keybinds
-  { 'folke/which-key.nvim', opts = {} },
+  { 'folke/which-key.nvim',   opts = {} },
 
   -- Colorscheme
   {
@@ -262,7 +262,7 @@ require('lazy').setup({
   { 'nvim-tree/nvim-tree.lua' },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim',  opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
   {
@@ -589,7 +589,7 @@ require("nvim-tree").setup({
   },
 })
 
-vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
+vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })                         -- toggle file explorer
 vim.keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" }) -- toggle file explorer on current file
-vim.keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" }) -- collapse file explorer
-vim.keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) -- refresh file explorer
+vim.keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })                     -- collapse file explorer
+vim.keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })                       -- refresh file explorer
