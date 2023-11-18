@@ -9,25 +9,6 @@ vim.g.maplocalleader = ' '
 -- See `:help vim.keymaps.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
--- Window movement
-vim.keymap.set("n", "<C-j>", "<C-w>j")
-vim.keymap.set("n", "<C-k>", "<C-w>k")
-vim.keymap.set("n", "<C-h>", "<C-w>h")
-vim.keymap.set("n", "<C-l>", "<C-w>l")
-
--- Clear search hightlights
-vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search hightlights" })
-
--- Disable arrow keys
-vim.keymap.set("n", "<up>", "<nop>")
-vim.keymap.set("n", "<down>", "<nop>")
-vim.keymap.set("n", "<left>", "<nop>")
-vim.keymap.set("n", "<right>", "<nop>")
-
--- Show next search result in the center of screen
-vim.keymap.set("n", "n", "nzz", { desc = "Show next search result" })
-vim.keymap.set("n", "N", "Nzz", { desc = "Show previous search result" })
-
 -- Buffer movement
 vim.keymap.set("n", "<tab>", ":bn<CR>", { desc = "Go to next buffer" })
 vim.keymap.set("n", "<S-tab>", ":bp<CR>", { desc = "Go to previous buffer" })
@@ -44,7 +25,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- Setting Options
 -- Set highlight on search
-vim.o.hlsearch = true
+vim.o.hlsearch = false
 
 -- Make line numbers default
 vim.wo.number = true
@@ -177,14 +158,6 @@ require('lazy').setup({
       -- load the colorscheme
       vim.cmd.colorscheme("catppuccin")
     end,
-  },
-
-  -- Maximize/Minimize current split
-  {
-    "szw/vim-maximizer",
-    keys = {
-      { "<C-w>m", "<cmd>MaximizerToggle<CR>" }
-    },
   },
 
   -- Adds git related signs to the gutter, as well as utilities for managing changes
