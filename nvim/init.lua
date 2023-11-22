@@ -59,6 +59,10 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal support this
 vim.o.termguicolors = true
 
+-- Open new horizontal split at bottom 
+-- Open new vertical split at right
+vim.o.splitbelow = true
+vim.o.splitright = true
 -- Highlight on yank
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
